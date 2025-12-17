@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
  * Navigation - Active state handling
  */
 function initializeNavigation() {
-    const currentPage = window.location.pathname.split('/').pop() || 'blog.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href === currentPage) {
             link.classList.add('active');
-        } else if (currentPage === '' && href === 'blog.html') {
+        } else if (currentPage === '' && href === 'index.html') {
             link.classList.add('active');
         }
     });
