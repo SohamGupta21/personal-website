@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizing Gradient Descent | Soham Gupta</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages.css">
+    <!-- Math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="content-wrapper">
+            <!-- Navigation -->
+            <nav class="navigation">
+                <a href="../about.html" class="nav-link">ABOUT</a>
+                <a href="../projects.html" class="nav-link">PROJECTS</a>
+                <a href="../index.html" class="nav-link">BLOG</a>
+            </nav>
+
+            <!-- Blog Post -->
+            <article class="blog-post">
+                <header class="blog-post-header">
+                    <div class="blog-post-meta">
+                        <time>November 1, 2023</time>
+                        <span>•</span>
+                        <span>Machine Learning</span>
+                        <span>•</span>
+                        <span>8 min read</span>
+                    </div>
+                    <h1 class="blog-post-title">Optimizing Gradient Descent</h1>
+                    <p class="blog-post-subtitle">
+                        A deep dive into momentum, adaptive learning rates, and modern optimization 
+                        techniques for training neural networks.
+                    </p>
+                </header>
+
+                <div class="blog-post-content">
+                    <p>
+                        Gradient descent is the workhorse of modern machine learning. At its core, it's 
+                        beautifully simple: compute the gradient of your loss function with respect to 
+                        your parameters, then take a step in the opposite direction. Yet this simplicity 
+                        belies the rich landscape of optimization techniques that have emerged over the years.
+                    </p>
+
+                    <h2>The Vanilla Algorithm</h2>
+                    
+                    <p>
+                        Standard gradient descent updates parameters according to a simple rule: 
+                        θ = θ - α∇L(θ), where α is the learning rate and ∇L(θ) is the gradient of the 
+                        loss. This works, but has well-documented issues with saddle points, local minima, 
+                        and sensitivity to the learning rate.
+                    </p>
+
+                    <pre><code>def gradient_descent(params, grad_fn, lr=0.01, steps=1000):
+    for _ in range(steps):
+        grads = grad_fn(params)
+        params = params - lr * grads
+    return params</code></pre>
+
+                    <h2>Momentum: Physics to the Rescue</h2>
+                    
+                    <p>
+                        Momentum adds a "velocity" term that accumulates gradient information over time. 
+                        Think of a ball rolling down a hill – it doesn't just follow the local slope, 
+                        it builds up speed in consistent directions.
+                    </p>
+
+                    <blockquote>
+                        "The key insight is that gradient descent is not just about finding the steepest 
+                        descent at each point, but about navigating the overall loss landscape efficiently."
+                    </blockquote>
+
+                    <p>
+                        The momentum update rule introduces a velocity term:
+                    </p>
+
+                    <ul>
+                        <li>v = βv + ∇L(θ) — accumulate the gradient with decay β</li>
+                        <li>θ = θ - αv — update parameters using velocity</li>
+                    </ul>
+
+                    <h2>Adam: Adaptive Moments</h2>
+                    
+                    <p>
+                        Adam (Adaptive Moment Estimation) combines the best of momentum with per-parameter 
+                        adaptive learning rates. It maintains exponentially decaying averages of both the 
+                        gradient (first moment) and squared gradient (second moment).
+                    </p>
+
+                    <pre><code>def adam(params, grad_fn, lr=0.001, beta1=0.9, beta2=0.999, eps=1e-8):
+    m = np.zeros_like(params)  # First moment
+    v = np.zeros_like(params)  # Second moment
+    t = 0
+    
+    for _ in range(steps):
+        t += 1
+        g = grad_fn(params)
+        m = beta1 * m + (1 - beta1) * g
+        v = beta2 * v + (1 - beta2) * g**2
+        
+        # Bias correction
+        m_hat = m / (1 - beta1**t)
+        v_hat = v / (1 - beta2**t)
+        
+        params = params - lr * m_hat / (np.sqrt(v_hat) + eps)
+    
+    return params</code></pre>
+
+                    <h2>When to Use What</h2>
+                    
+                    <p>
+                        In practice, Adam is often the default choice for deep learning. However, recent 
+                        work has shown that SGD with momentum can generalize better in some cases, 
+                        particularly for image classification tasks. The key is understanding your 
+                        problem's loss landscape.
+                    </p>
+
+                    <h3>Practical Tips</h3>
+                    
+                    <ul>
+                        <li>Start with Adam at lr=0.001 for quick experimentation</li>
+                        <li>Use learning rate warmup for large batch training</li>
+                        <li>Consider SGD+momentum for final fine-tuning</li>
+                        <li>Monitor gradient norms to detect instability</li>
+                    </ul>
+
+                    <p>
+                        The optimization landscape continues to evolve. Recent developments like LAMB, 
+                        AdaFactor, and Lion offer promising alternatives for specific use cases. The 
+                        best optimizer is often problem-dependent – understanding the fundamentals helps 
+                        you make informed choices.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Back Link -->
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+                <a href="../index.html" style="color: var(--color-text-secondary); font-size: 0.875rem;">
+                    ← Back to all posts
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+</html>
+
