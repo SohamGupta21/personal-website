@@ -1,0 +1,94 @@
+{
+  "builds": [
+    {
+      "year": "2026",
+      "title": "Copymarket",
+      "description": "Copy trading platform for Polymarket. Allows anyone to connect their Polymarket account and copy the best traders.",
+      "tags": ["Prediction Markets", "Web Dev"],
+      "links": {
+        "external": "https://copymarket-frontend.vercel.app/"
+      }
+    },
+    {
+      "year": "2025",
+      "title": "Amicus",
+      "description": "AI assistant for litigation review. Uses an advanced RAG pipeline to answer legal queries and drastically reduce research time.",
+      "tags": ["RAG", "Python", "Web Dev"],
+      "links": {
+        "external": "https://amicus-ac215.vercel.app"
+      }
+    },
+    {
+      "year": "2025",
+      "title": "Poly Portfolio",
+      "description": "Platform that allows you to track exposure and statistics of any Polymarket account.",
+      "tags": ["Prediction Markets", "Web Dev"],
+      "links": {
+        "external": "https://poly-portfolio.vercel.app"
+      }
+    },
+    {
+      "year": "2025",
+      "title": "Crypto Lottery",
+      "description": "On chain crypto lottery game. By using a staggered drawing process, users can trade tickets and earn rewards.",
+      "tags": ["Crypto", "Web3"],
+      "links": {
+      }
+    },
+    {
+      "year": "2022",
+      "title": "PeopleWeave",
+      "description": "Analytics and community platform for research conferences to help attendees better meet people and to encourage diversity efforts. Used by 100s at top international conferences.",
+      "tags": ["Research", "Graph Algorithms", "Web Dev"],
+      "links": {
+      }
+    },
+    {
+      "year": "2022",
+      "title": "FORM",
+      "description": "AI-powered basketball app that coaches players to improve their shooting. Launching soon!",
+      "tags": ["Swift", "Computer Vision", "App Dev"],
+      "links": {
+      }
+    }
+  ],
+  "research": [
+    {
+      "year": "2025",
+      "title": "MIRAGE",
+      "description": "Model-agnostic framework that generates symbolic explanations and proof trees via SLD-resolution to explain black-box model predictions.",
+      "tags": ["Python", "Symbolic ML", "Interpretability"],
+      "links": {
+        "paper": "papers/mirage.pdf"
+      }
+    },
+    {
+      "year": "2025",
+      "title": "SpikeTrade",
+      "description": "Large-scale stock market simulation framework that integrates Spiking Neural Networks with algorithmic traders and random traders to model realistic market dynamics.",
+      "tags": ["Neural Networks", "Finance", "Simulation"],
+      "links": {
+        "paper": "papers/spike-trade.pdf"
+      }
+    },
+    {
+      "year": "2025",
+      "title": "Sentinel",
+      "description": "Moves runtime assertions earlier in Python programs to detect violations before unnecessary computation occurs. Uses LLMs to generate early assertions and a multi-stage verification pipeline to prove logical equivalence with original checks.",
+      "tags": ["Python", "Formal Verification", "LLMs"],
+      "links": {
+        "paper": "papers/sentinel.pdf"
+      }
+    },
+    {
+      "year": "2024",
+      "title": "Spice-X",
+      "description": "Global and contrastive explanation framework that detects bias in LLMs by integrating multiple concept extraction methods to identify demographic disparities in model outputs. Uses conditional probability distributions and cross-validation across methods to surface population-level bias patterns.",
+      "tags": ["Python", "Bias Detection", "LLMs"],
+      "links": {
+        "paper": "papers/spice-x.pdf"
+      }
+    }
+  ],
+  "music": []
+}

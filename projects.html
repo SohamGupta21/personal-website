@@ -32,184 +32,32 @@
             <header class="hero">
                 <h1 class="hero-name">Work</h1>
                 <p class="hero-subtitle">Some of my favorite projects</p>
+                <p class="hero-note" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7; font-style: italic;">Minor projects are omitted for clarity.</p>
             </header>
 
             <!-- Builds Section -->
             <section class="projects-section">
                 <h2 class="section-heading">Builds</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-year">2024</span>
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="GitHub">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link" aria-label="External link">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Neural Style Transfer</h3>
-                        <p class="project-description">
-                            Implementation of artistic style transfer using convolutional neural networks. 
-                            Applies the style of famous paintings to photographs in real-time.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">PyTorch</span>
-                            <span class="project-tag">CNN</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-year">2024</span>
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="GitHub">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Distributed Key-Value Store</h3>
-                        <p class="project-description">
-                            A fault-tolerant distributed key-value store implementing Raft consensus. 
-                            Supports linearizable reads and writes across multiple nodes.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Go</span>
-                            <span class="project-tag">Raft</span>
-                            <span class="project-tag">Distributed Systems</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-year">2023</span>
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="GitHub">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link" aria-label="Demo">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Probabilistic Data Structures Library</h3>
-                        <p class="project-description">
-                            High-performance library implementing Bloom filters, Count-Min Sketch, 
-                            HyperLogLog, and other probabilistic data structures.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Rust</span>
-                            <span class="project-tag">Algorithms</span>
-                            <span class="project-tag">Library</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-year">2023</span>
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="GitHub">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link" aria-label="Live site">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Real-time Collaboration Editor</h3>
-                        <p class="project-description">
-                            A Google Docs-like collaborative text editor using CRDTs for conflict-free 
-                            synchronization. Supports real-time cursors and presence.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">TypeScript</span>
-                            <span class="project-tag">WebSocket</span>
-                            <span class="project-tag">CRDT</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-year">2022</span>
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="GitHub">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Mini Operating System</h3>
-                        <p class="project-description">
-                            A minimal x86 operating system kernel with memory management, process scheduling, 
-                            and a basic filesystem. Written from scratch in assembly and C.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">C</span>
-                            <span class="project-tag">Assembly</span>
-                            <span class="project-tag">OS</span>
-                        </div>
-                    </article>
+                <div class="projects-grid" id="builds-grid">
+                    <!-- Projects will be loaded from JSON -->
                 </div>
             </section>
 
             <!-- Research Section -->
             <section class="projects-section">
                 <h2 class="section-heading">Research</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-year">2023</span>
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Paper">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Bayesian Optimization for Hyperparameters</h3>
-                        <p class="project-description">
-                            Research on using Gaussian processes for efficient hyperparameter tuning 
-                            in deep learning models. Published at undergraduate research symposium.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Bayesian ML</span>
-                            <span class="project-tag">Research</span>
-                        </div>
-                    </article>
+                <div class="projects-grid" id="research-grid">
+                    <!-- Projects will be loaded from JSON -->
                 </div>
             </section>
 
             <!-- Music Projects Section -->
             <section class="projects-section">
                 <h2 class="section-heading">Music Projects</h2>
-                <p class="section-empty">Coming soon...</p>
+                <div class="projects-grid" id="music-grid">
+                    <!-- Projects will be loaded from JSON -->
+                </div>
+                <p class="section-empty" id="music-empty" style="display: none;">Coming soon...</p>
             </section>
         </div>
     </main>
